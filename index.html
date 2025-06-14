@@ -3,44 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DPS Logistics offers container and trailer transportation services including 40 feet and 30 feet vehicles. Based in Steel Chamber, Kalamboli." />
   <title>DPS Logistics</title>
+  <meta name="description" content="DPS Logistics offers 30ft and 40ft trailer/container transportation across India. Based in Steel Chamber, Kalamboli." />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #f4f6f8; color: #333; }
-    header { background: #004085; color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; z-index: 1000; }
-    header .logo { height: 50px; }
-    header .title { flex: 1; text-align: center; font-size: 1.8rem; font-weight: bold; }
-    nav ul { list-style: none; display: flex; gap: 1rem; }
-    nav ul li a { color: white; text-decoration: none; padding: 0.5rem 1rem; }
-    nav ul li a:hover { background: rgba(255,255,255,0.2); border-radius: 5px; }
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-    .carousel-container { margin-top: 90px; position: relative; overflow: hidden; max-height: 450px; }
-    .carousel-images { display: flex; transition: transform 0.5s ease-in-out; }
-    .carousel-images img { width: 100vw; height: 450px; object-fit: cover; flex-shrink: 0; }
-    .carousel-button { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); border: none; color: white; padding: 10px; cursor: pointer; font-size: 24px; }
-    .carousel-button.left { left: 10px; }
-    .carousel-button.right { right: 10px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    section { padding: 3rem 2rem; margin: 2rem auto; max-width: 1000px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    h2 { margin-bottom: 1.5rem; color: #004085; text-align: center; }
-    .testimonial { background: #f1f1f1; padding: 1rem; margin-bottom: 1rem; border-radius: 10px; display: flex; align-items: center; gap: 1rem; }
-    .testimonial img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
-    .testimonial p { margin: 0; }
-    iframe { width: 100%; height: 300px; border: none; border-radius: 10px; margin-top: 1rem; }
-    footer { background: #003060; color: white; text-align: center; padding: 1.5rem 0; margin-top: 2rem; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      flex: 1;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        background: #003366;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 180px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .carousel-container {
+      margin-top: 80px;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      min-width: 100vw;
+      max-width: 100vw;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-size: 2rem;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .carousel-button.left {
+      left: 10px;
+    }
+
+    .carousel-button.right {
+      right: 10px;
+    }
+
+    section {
+      padding: 2rem 1.5rem;
+      margin: 1.5rem auto;
+      background: white;
+      border-radius: 10px;
+      max-width: 1000px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #003366;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial {
+      display: flex;
+      gap: 1rem;
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+
+    .testimonial img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    footer {
+      background: #002244;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.jpg" alt="DPS Logistics Logo" class="logo">
+    <img src="logo.jpg" alt="Logo" class="logo" />
     <div class="title">DPS Logistics</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav>
-      <ul>
+      <ul id="navMenu">
         <li><a href="#home">Home</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -48,10 +210,10 @@
   <div class="carousel-container">
     <button class="carousel-button left" onclick="moveCarousel(-1)">&#10094;</button>
     <div class="carousel-images" id="carouselImages">
-      <img src="1.png" alt="Container Truck">
-      <img src="2.jpg" alt="Trailer on Road">
-      <img src="3.jpeg" alt="Logistics Fleet">
-      <img src="4.avif" alt="Warehouse Logistics">
+      <img src="1.png" alt="Slide 1" />
+      <img src="2.jpg" alt="Slide 2" />
+      <img src="3.jpeg" alt="Slide 3" />
+      <img src="4.avif" alt="Slide 4" />
     </div>
     <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
   </div>
@@ -59,47 +221,38 @@
   <section id="home">
     <h2>Welcome to DPS Logistics</h2>
     <p>
-      DPS Logistics, located in Kalamboli's prestigious Steel Chamber, stands at the forefront of the logistics industry in India. Specializing in trailer and container transportation, we offer solutions tailored to a wide range of sectors including manufacturing, retail, and infrastructure development. Our fleet includes 30-feet and 40-feet containers capable of handling large and time-sensitive consignments. <br/><br/>
-      With over a decade of experience, we focus on timely deliveries, secure cargo handling, and cost-effective service options that ensure our clients' peace of mind. We employ trained professionals who understand the nuances of freight management and traffic logistics. Whether it’s local delivery or cross-state transport, our network ensures smooth movement of your goods.<br/><br/>
-      Technology is at the core of our operations. Our vehicles are GPS-tracked, enabling real-time updates and route optimization. This ensures not just timely delivery but safety and transparency in the entire process. We also provide a support team that keeps our customers informed about their shipments around the clock.<br/><br/>
-      Our base in Kalamboli, a hub for industrial and transport businesses, offers a strategic advantage in reaching western and southern Indian states swiftly. We operate under the philosophy of "Commitment First," always focusing on customer satisfaction through operational excellence and responsive support.<br/><br/>
-      With a track record of reliability and thousands of successful shipments, DPS Logistics is not just a service provider — we are a long-term logistics partner. Choose DPS Logistics for professionalism, technology-driven operations, and unparalleled reach in India’s logistics network.
+      DPS Logistics, headquartered in Kalamboli’s Steel Chamber, is a leading logistics company specializing in the transportation of containers and trailers (30ft and 40ft). We are committed to timely deliveries and unmatched customer satisfaction.
+    </p>
+    <p>
+      Our services span across Maharashtra and India, offering real-time tracking, safe transit, and experienced drivers. Whether it’s heavy industrial goods or time-sensitive shipments, our team ensures every consignment reaches on schedule.
+    </p>
+    <p>
+      With a decade of experience and a loyal customer base, DPS Logistics stands as a symbol of trust, safety, and excellence in the transport sector.
     </p>
   </section>
 
   <section id="testimonials">
     <h2>Client Testimonials</h2>
     <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1">
-      <p>"DPS Logistics has been a reliable partner for our shipments. Their service is always timely and professional." – S. Mehta, Mumbai</p>
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1" />
+      <p>"Reliable and professional service. Their 40ft containers always arrive on time. Highly recommended!"</p>
     </div>
     <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client 2">
-      <p>"We’ve used their 40-feet trailers multiple times. They’re always on time and communicate clearly." – R. Desai, Pune</p>
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client 2" />
+      <p>"Exceptional customer service and consistent tracking updates. They handle urgent deliveries flawlessly."</p>
     </div>
     <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Client 3">
-      <p>"Very professional team. Their logistics support helped streamline our distribution process greatly." – A. Sharma, Nashik</p>
+      <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Client 3" />
+      <p>"Very satisfied with DPS Logistics. The team is responsive and shipments are well-handled."</p>
     </div>
-    <p>
-      Over the years, our clients have consistently praised our punctuality, safety protocols, and clear communication. Our ability to handle high-volume deliveries without delays has earned us a loyal clientele that spans across industries. We treat every delivery with utmost importance — whether it's a one-time shipment or a regular contract.<br/><br/>
-      Many of our clients are long-term partners who value our customer-centric approach. From secure packaging to optimized delivery routes, we ensure that the customer's goods are in safe hands. This has helped us grow organically through client recommendations and repeat business. Trust and transparency remain the core values in every testimonial we receive.
-    </p>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>
-      DPS Logistics welcomes inquiries, project discussions, and logistics planning support from both new and existing customers. We believe in open communication and accessible service. Our contact details are listed below for your convenience.<br/><br/>
-      <strong>Mobile:</strong> <a href="tel:9320026555">9320026555</a><br/>
-      <strong>Email:</strong> <a href="mailto:dps.logistics111@gmail.com">dps.logistics111@gmail.com</a><br/>
-      <strong>Address:</strong> B-405, B-Wing, Steel Chamber, Kalamboli - 410218
-    </p>
-    <h3>Find Us on the Map:</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.7908811993443!2d73.10148358077404!3d19.028934336182207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749887011353!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <p>
-      Our Kalamboli office is easily accessible and located in one of the most strategic logistics zones in Maharashtra. We encourage visitors to schedule appointments in advance to ensure dedicated time with our team. Whether it's planning freight routes or discussing contract terms, we're always here to assist.
-    </p>
+    <p><strong>Phone:</strong> <a href="tel:+919320026555">+91 93200 26555</a></p>
+    <p><strong>Email:</strong> <a href="mailto:dps.logistics111@gmail.com">dps.logistics111@gmail.com</a></p>
+    <p><strong>Address:</strong> B-405, B-Wing, Steel Chamber, Kalamboli - 410218</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.7908811993443!2d73.10148358077404!3d19.028934336182207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749887011353!5m2!1sen!2sin" loading="lazy"></iframe>
   </section>
 
   <footer>
@@ -109,12 +262,18 @@
   <script>
     let currentIndex = 0;
     const images = document.querySelectorAll('#carouselImages img');
-    function moveCarousel(direction) {
-      currentIndex += direction;
+
+    function moveCarousel(dir) {
+      currentIndex += dir;
       if (currentIndex < 0) currentIndex = images.length - 1;
       if (currentIndex >= images.length) currentIndex = 0;
       document.getElementById('carouselImages').style.transform = `translateX(-${currentIndex * 100}vw)`;
     }
+
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
   </script>
+
 </body>
 </html>

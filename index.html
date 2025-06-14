@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DPS Logistics offers container and trailer transportation services including 40 feet and 30 feet vehicles. Based in Steel Chamber, Kalamboli." />
+  <title>DPS Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #f4f6f8; color: #333; }
+    header { background: #004085; color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; z-index: 1000; }
+    header .logo { height: 50px; }
+    header .title { flex: 1; text-align: center; font-size: 1.8rem; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav ul li a { color: white; text-decoration: none; padding: 0.5rem 1rem; }
+    nav ul li a:hover { background: rgba(255,255,255,0.2); border-radius: 5px; }
+
+    .carousel-container { margin-top: 90px; position: relative; overflow: hidden; max-height: 450px; }
+    .carousel-images { display: flex; transition: transform 0.5s ease-in-out; }
+    .carousel-images img { width: 100vw; height: 450px; object-fit: cover; flex-shrink: 0; }
+    .carousel-button { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); border: none; color: white; padding: 10px; cursor: pointer; font-size: 24px; }
+    .carousel-button.left { left: 10px; }
+    .carousel-button.right { right: 10px; }
+
+    section { padding: 3rem 2rem; margin: 2rem auto; max-width: 1000px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h2 { margin-bottom: 1.5rem; color: #004085; text-align: center; }
+    .testimonial { background: #f1f1f1; padding: 1rem; margin-bottom: 1rem; border-radius: 10px; display: flex; align-items: center; gap: 1rem; }
+    .testimonial img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+    .testimonial p { margin: 0; }
+    iframe { width: 100%; height: 300px; border: none; border-radius: 10px; margin-top: 1rem; }
+    footer { background: #003060; color: white; text-align: center; padding: 1.5rem 0; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="DPS Logistics Logo" class="logo">
+    <div class="title">DPS Logistics</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="carousel-container">
+    <button class="carousel-button left" onclick="moveCarousel(-1)">&#10094;</button>
+    <div class="carousel-images" id="carouselImages">
+      <img src="1.png" alt="Container Truck">
+      <img src="2.jpg" alt="Trailer on Road">
+      <img src="3.jpeg" alt="Logistics Fleet">
+      <img src="4.avif" alt="Warehouse Logistics">
+    </div>
+    <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
+  </div>
+
+  <section id="home">
+    <h2>Welcome to DPS Logistics</h2>
+    <p>
+      DPS Logistics, located in Kalamboli's prestigious Steel Chamber, stands at the forefront of the logistics industry in India. Specializing in trailer and container transportation, we offer solutions tailored to a wide range of sectors including manufacturing, retail, and infrastructure development. Our fleet includes 30-feet and 40-feet containers capable of handling large and time-sensitive consignments. <br/><br/>
+      With over a decade of experience, we focus on timely deliveries, secure cargo handling, and cost-effective service options that ensure our clients' peace of mind. We employ trained professionals who understand the nuances of freight management and traffic logistics. Whether it’s local delivery or cross-state transport, our network ensures smooth movement of your goods.<br/><br/>
+      Technology is at the core of our operations. Our vehicles are GPS-tracked, enabling real-time updates and route optimization. This ensures not just timely delivery but safety and transparency in the entire process. We also provide a support team that keeps our customers informed about their shipments around the clock.<br/><br/>
+      Our base in Kalamboli, a hub for industrial and transport businesses, offers a strategic advantage in reaching western and southern Indian states swiftly. We operate under the philosophy of "Commitment First," always focusing on customer satisfaction through operational excellence and responsive support.<br/><br/>
+      With a track record of reliability and thousands of successful shipments, DPS Logistics is not just a service provider — we are a long-term logistics partner. Choose DPS Logistics for professionalism, technology-driven operations, and unparalleled reach in India’s logistics network.
+    </p>
+  </section>
+
+  <section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1">
+      <p>"DPS Logistics has been a reliable partner for our shipments. Their service is always timely and professional." – S. Mehta, Mumbai</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client 2">
+      <p>"We’ve used their 40-feet trailers multiple times. They’re always on time and communicate clearly." – R. Desai, Pune</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Client 3">
+      <p>"Very professional team. Their logistics support helped streamline our distribution process greatly." – A. Sharma, Nashik</p>
+    </div>
+    <p>
+      Over the years, our clients have consistently praised our punctuality, safety protocols, and clear communication. Our ability to handle high-volume deliveries without delays has earned us a loyal clientele that spans across industries. We treat every delivery with utmost importance — whether it's a one-time shipment or a regular contract.<br/><br/>
+      Many of our clients are long-term partners who value our customer-centric approach. From secure packaging to optimized delivery routes, we ensure that the customer's goods are in safe hands. This has helped us grow organically through client recommendations and repeat business. Trust and transparency remain the core values in every testimonial we receive.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      DPS Logistics welcomes inquiries, project discussions, and logistics planning support from both new and existing customers. We believe in open communication and accessible service. Our contact details are listed below for your convenience.<br/><br/>
+      <strong>Mobile:</strong> <a href="tel:9320026555">9320026555</a><br/>
+      <strong>Email:</strong> <a href="mailto:dps.logistics111@gmail.com">dps.logistics111@gmail.com</a><br/>
+      <strong>Address:</strong> B-405, B-Wing, Steel Chamber, Kalamboli - 410218
+    </p>
+    <h3>Find Us on the Map:</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.7908811993443!2d73.10148358077404!3d19.028934336182207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749887011353!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>
+      Our Kalamboli office is easily accessible and located in one of the most strategic logistics zones in Maharashtra. We encourage visitors to schedule appointments in advance to ensure dedicated time with our team. Whether it's planning freight routes or discussing contract terms, we're always here to assist.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DPS Logistics. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#carouselImages img');
+    function moveCarousel(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById('carouselImages').style.transform = `translateX(-${currentIndex * 100}vw)`;
+    }
+  </script>
+</body>
+</html>
